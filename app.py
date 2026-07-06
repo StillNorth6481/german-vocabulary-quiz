@@ -177,25 +177,25 @@ if submitted:
 
     else:
 
-    chance = random.randint(1, 100)
+        chance = random.randint(1, 100)
 
-    if chance <= 70:
-        ...
-
-    elif chance <= 90:
-
-        left, right = st.columns([3, 2])
-
-        with left:
-            st.error(...)
-            st.write(...)
-
-        with right:
-            if bad_gifs and random.randint(1, 3) == 1:
-                st.image(
-                    random.choice(bad_gifs),
-                    width=250
-                )
+        if chance <= 70:
+            ...
+    
+        elif chance <= 90:
+    
+            left, right = st.columns([3, 2])
+    
+            with left:
+                st.error(...)
+                st.write(...)
+    
+            with right:
+                if bad_gifs and random.randint(1, 3) == 1:
+                    st.image(
+                        random.choice(bad_gifs),
+                        width=250
+                    )
 
 
         elif chance <= 95:
