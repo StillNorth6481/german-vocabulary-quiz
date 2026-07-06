@@ -127,24 +127,24 @@ if user_answer in accepted_answers:
         random.choice(correct_messages)
     )
 
-        st.session_state.score += 1
+    st.session_state.score += 1
     
-        # SUPER RARE EVENT
-        if random.randint(1, 50) == 1:
+    # SUPER RARE EVENT
+    if random.randint(1, 50) == 1:
     
-            st.image(
-                random.choice(good_gifs),
-                width=350
-            )
+        st.image(
+            random.choice(good_gifs),
+            width=350
+        )
     
-            st.success(
-                f"LEGENDARY DROP: {random.choice(legendary_rewards)}"
-            )
+        st.success(
+            f"LEGENDARY DROP: {random.choice(legendary_rewards)}"
+        )
     
-        if st.session_state.score in [10, 50, 100]:
+    if st.session_state.score in [10, 50, 100]:
             pass
 
-    else:
+else:
 
         chance = random.randint(1, 100)
 
