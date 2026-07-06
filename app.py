@@ -87,7 +87,14 @@ with st.form("quiz_form"):
 
 if submitted:
 
-    if answer.strip().lower() == correct_answer.lower():
+    user_answer = answer.strip().lower()
+
+    accepted_answers = [
+        meaning.lower()
+        for meaning in correct_answer
+    ]
+
+    if user_answer in accepted_answers:
 
         st.success(
             random.choice(correct_messages)
@@ -120,7 +127,8 @@ if submitted:
         )
 
         st.write(
-            f"Correct answer: **{correct_answer}**"
+            "Accepted answers: "
+            + ", ".join(correct_answer)
         )
 
     st.session_state.show_next = True
