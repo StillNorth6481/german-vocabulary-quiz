@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-from german_words_500 import german_words
+from german_words_multi_meanings import german_words
 
 st.set_page_config(
     page_title="German Vocabulary Quiz",
@@ -32,22 +32,32 @@ if "word" not in st.session_state:
 
 correct_messages = [
     "Sehr gut! 🇩🇪",
-    "Excellent! 🔥",
-    "Germany is getting closer! 🚀",
-    "Vocabulary unlocked! ⭐",
-    "Perfect answer! 👏",
-    "B2 Warrior! ⚔️",
-    "Outstanding! 🎉"
+    "Germany is one step closer 🚀",
+    "Bhai, Goethe examiner smiled 😊",
+    "The visa officer approves this answer ✅",
+    "Duolingo owl is proud of you 🦉",
+    "B2 Warrior unlocked ⚔️",
+    "This word fears you now 😎",
+    "You cooked! 🔥",
+    "German proficiency +1 📈",
+    "Fluent German arc has begun 🇩🇪"
 ]
 
 wrong_messages = [
     "Kyu nahi ho rahe padhaye 😭",
     "Germany jaake kya bologe bhai? 😂",
-    "Bro, revise this one again!",
-    "Aaj padhai ka mood nahi hai kya? 😅",
-    "Duolingo owl is disappointed 🦉",
-    "The word is crying in the corner 😭",
-    "Phone band karo aur padhai karo 😂"
+    "Bhai, Goethe examiner is watching you 👀",
+    "Duolingo owl has booked your flight back to India ✈️",
+    "Aaj vocabulary ki vaat lag gayi 😭",
+    "Bro, B2 certificate won't print itself 😭",
+    "The word just filed a complaint against you 📄",
+    "Your German teacher fainted after seeing this answer 💀",
+    "Even Google Translate is disappointed 😔",
+    "At this rate you'll order Schnitzel in English 😭",
+    "The visa officer just raised an eyebrow 🤨",
+    "Padh le bhai, September is coming 🇩🇪",
+    "This word will come in the exam now because you got it wrong 😈",
+    "The word is laughing at you right now 😂"
 ]
 
 # ---------------- PROGRESS ----------------
