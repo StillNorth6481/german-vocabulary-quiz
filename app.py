@@ -63,6 +63,13 @@ correct_messages = [
     "Main character energy detected ✨"
 ]
 
+wrong_gifs = [
+    "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif",
+    "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
+    "https://media.giphy.com/media/10JhviFuU2gWD6/giphy.gif",
+    "https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif"
+]
+
 wrong_messages = [
     "Kyu nahi ho rahe padhaye 😭",
     "Germany jaake kya bologe bhai? 😂",
@@ -104,6 +111,16 @@ wrong_messages = [
     "This answer deserves a standing ovation... for comedy 😂",
     "Bhai, revise this one before it revises you 😭",
     "The vocabulary gods are disappointed today ⚡"
+]
+
+boss_messages = [
+    "💀 Goethe Examiner Boss Fight Started!",
+    "💀 Visa Officer Appeared!",
+    "💀 German Grammar Demon Spawned!",
+    "💀 Duolingo Owl Final Form Unlocked!",
+    "💀 B2 Certificate has left the chat!",
+    "💀 German Boss Music Starts Playing...",
+    "💀 You have encountered the Final Exam!"
 ]
 
 # ---------------- PROGRESS ----------------
@@ -182,13 +199,44 @@ if submitted:
 
     else:
 
-        st.error(
-            random.choice(wrong_messages)
+     st.error(
+        random.choice(wrong_messages)
+    )
+
+    st.write(
+        "Accepted answers: "
+        + ", ".join(correct_answer)
+    )
+
+    chance = random.randint(1, 100)
+
+    if chance <= 70:
+        pass
+
+    elif chance <= 90:
+        st.image(
+            random.choice(wrong_gifs),
+            width=300
         )
 
-        st.write(
-            "Accepted answers: "
-            + ", ".join(correct_answer)
+    elif chance <= 95:
+        st.snow()
+
+    elif chance <= 99:
+        st.balloons()
+
+    else:
+        st.error(
+            random.choice(boss_messages)
+        )
+
+        st.image(
+            "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
+            width=350
+        )
+
+        st.warning(
+            "The Duolingo owl has arrived at your location 💀"
         )
 
     st.session_state.show_next = True
