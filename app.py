@@ -82,6 +82,15 @@ example_en = word_info['example_en']
 
 st.header(word)
 
+if st.button("📖 Show Example Sentence"):
+    if example_de:
+        st.info(example_de)
+        st.info(example_en)
+    else:
+        st.warning(
+            "No example sentence available yet."
+        )
+        
 with st.form("quiz_form"):
     answer = st.text_input(
         "Enter the English meaning:"
