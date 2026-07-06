@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-from german_words_multi_meanings import german_words
+from german_words_with_examples_filled import german_words
 
 st.set_page_config(
     page_title="German Vocabulary Quiz",
