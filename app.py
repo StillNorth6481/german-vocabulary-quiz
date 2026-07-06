@@ -33,8 +33,24 @@ wrong_messages = [
     "The vocabulary gods are disappointed today ⚡"
 ]
 
-good_gifs = []
-bad_gifs = []
+good_gifs = [
+    "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif",
+    "https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif",
+    "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif",
+    "https://media.giphy.com/media/ely3apij36BJhoZ234/giphy.gif",
+    "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif",
+    "https://media.giphy.com/media/3oz8xAFtqoOUUrsh7W/giphy.gif",
+    "https://media.giphy.com/media/1BdIPBW9J2R4Q/giphy.gif"
+]
+bad_gifs = [
+    "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
+    "https://media.giphy.com/media/10JhviFuU2gWD6/giphy.gif",
+    "https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif",
+    "https://media.giphy.com/media/11mwI67GLeMvgA/giphy.gif",
+    "https://media.giphy.com/media/26n6WywJyh39n1pBu/giphy.gif",
+    "https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif",
+    "https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif"
+]
 
 boss_messages = [
     "💀 Goethe Examiner Boss Fight Started!",
