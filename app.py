@@ -141,41 +141,12 @@ st.write(
     f"Score: {st.session_state.score} / {total_words}"
 )
 
-# ---------------- QUIZ ----------------
-
-word = st.session_state.word
-
-word_info = german_words[word]
-
-correct_answer = word_info['meanings']
-example_de = word_info['example_de']
-example_en = word_info['example_en']
-
-st.header(word)
-
-if st.button("📖 Show Example Sentence"):
-    if example_de:
-        st.info(example_de)
-        
-    else:
-        st.warning(
-            "No example sentence available yet."
-        )
-        
-with st.form("quiz_form"):
-    answer = st.text_input(
-        "Enter the English meaning:"
-    )
-    submitted = st.form_submit_button(
-        "Check"
-    )
-
 if submitted:
 
     user_answer = answer.strip().lower()
 
     accepted_answers = [
-        meaning.lower()
+        meaning.strip().lower()
         for meaning in correct_answer
     ]
 
@@ -187,69 +158,59 @@ if submitted:
 
         st.session_state.score += 1
 
-        if st.session_state.score == 10:
-            st.balloons()
-            st.success(
-                "10 correct! You're on fire! 🔥"
-            )
-
-        if st.session_state.score == 50:
-            st.balloons()
-            st.success(
-                "50 words mastered! 🇩🇪"
-            )
-
-        if st.session_state.score == 100:
-            st.balloons()
-            st.success(
-                "100 words mastered! Legendary! 🏆"
-            )
-
     else:
 
-     st.error(
-        random.choice(wrong_messages)
-    )
+        chance = random.randint(1, 100)
 
-    st.write(
-        "Accepted answers: "
-        + ", ".join(correct_answer)
-    )
+        if chance <= 70:
+            st.error(random.choice(wrong_messages))
+            st.write(
+                "Accepted answers: "
+                + ", ".join(correct_answer)
+            )
 
-    chance = random.randint(1, 100)
+        elif chance <= 90:
 
-    if chance <= 70:
-        pass
+            text_col, gif_col = st.columns([3, 2])
 
-    elif chance <= 90:
-        st.image(
-            random.choice(wrong_gifs),
-            width=300
-        )
+            with text_col:
+                st.error(
+                    random.choice(wrong_messages)
+                )
 
-    elif chance <= 95:
-        st.snow()
+                st.write(
+                    "Accepted answers: "
+                    + ", ".join(correct_answer)
+                )
 
-    elif chance <= 99:
-        st.balloons()
+            with gif_col:
+                st.image(
+                    random.choice(wrong_gifs),
+                    width=250
+                )
 
-    else:
-        st.error(
-            random.choice(boss_messages)
-        )
+        elif chance <= 95:
+            st.snow()
+            st.error(
+                random.choice(wrong_messages)
+            )
 
-        st.image(
-            "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
-            width=350
-        )
+        elif chance <= 99:
+            st.balloons()
+            st.error(
+                random.choice(wrong_messages)
+            )
 
-        st.warning(
-            "The Duolingo owl has arrived at your location 💀"
-        )
+        else:
+            st.error(
+                random.choice(boss_messages)
+            )
+
+            st.warning(
+                "The Duolingo owl has arrived at your location 💀"
+            )
 
     st.session_state.show_next = True
-
-# ---------------- NEXT WORD ----------------
 
 if st.session_state.show_next:
 
