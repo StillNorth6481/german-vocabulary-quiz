@@ -151,7 +151,7 @@ st.header(word)
 if st.button("📖 Show Example Sentence"):
     if example_de:
         st.info(example_de)
-        #st.info(example_en)
+        st.info(example_en)
     else:
         st.warning("No example sentence available yet.")
 
@@ -169,34 +169,26 @@ if submitted:
         st.success(random.choice(correct_messages))
         st.session_state.score += 1
 
-        if good_gifs and random.randint(1, 5) == 1:
-            st.image(
-                random.choice(good_gifs),
-                width=350
-            )
+        if good_gifs and random.randint(1, 50) == 1:
+            st.image(random.choice(good_gifs), width=350)
+            st.success(f"LEGENDARY DROP: {random.choice(legendary_rewards)}")
 
     else:
 
         chance = random.randint(1, 100)
 
         if chance <= 70:
-            ...
-    
-        elif chance <= 90:
-    
-            left, right = st.columns([3, 2])
-    
-            with left:
-                st.error(...)
-                st.write(...)
-    
-            with right:
-                if bad_gifs and random.randint(1, 3) == 1:
-                    st.image(
-                        random.choice(bad_gifs),
-                        width=250
-                    )
+            st.error(random.choice(wrong_messages))
+            st.write("Accepted answers: " + ", ".join(correct_answer))
 
+        elif chance <= 90:
+            left, right = st.columns([3, 2])
+            with left:
+                st.error(random.choice(wrong_messages))
+                st.write("Accepted answers: " + ", ".join(correct_answer))
+            with right:
+                if bad_gifs:
+                    st.image(random.choice(bad_gifs), width=250)
 
         elif chance <= 95:
             st.snow()
