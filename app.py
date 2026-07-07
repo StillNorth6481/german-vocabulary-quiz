@@ -61,7 +61,7 @@ wrong_messages = [
     "Skill issue 🗿",
     "Mission failed successfully 😭",
     "Bro got humbled by one German word 💀",
-    "The vocabulary gods are disappointed today ⚡"
+    "The vocabulary gods are disappointed today ⚡",
     "Kyu nahi ho rahe padhaye 😭",
     "Germany jaake kya bologe bhai? 😂",
     "Bhai, Goethe examiner is watching you 👀",
@@ -187,7 +187,7 @@ if submitted:
         st.success(random.choice(correct_messages))
         st.session_state.score += 1
     
-        if good_gifs and random.randint(1, 5) == 1:
+        if good_gifs:
             st.image(
                 random.choice(good_gifs),
                 width=350
