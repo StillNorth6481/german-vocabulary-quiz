@@ -192,6 +192,9 @@ if submitted:
                     random.choice(good_gifs),
                     width=350
                 )
+                st.success(
+                    f"LEGENDARY DROP: {random.choice(legendary_rewards)}"
+                )
     
     else:
     
@@ -203,16 +206,6 @@ if submitted:
                 random.choice(bad_gifs),
                 width=250
             )
-    
-            elif chance <= 95:
-                st.error(random.choice(wrong_messages))
-    
-            elif chance <= 99:
-                st.error(random.choice(wrong_messages))
-    
-            else:
-                st.error(random.choice(boss_messages))
-                st.warning("The Duolingo owl has arrived at your location 💀")
     
     st.session_state.show_next = True
 
