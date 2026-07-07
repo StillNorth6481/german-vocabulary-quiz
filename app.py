@@ -196,7 +196,7 @@ if submitted:
                 f"LEGENDARY DROP: {random.choice(legendary_rewards)}"
             )
     
-        else:
+    else:
     
             chance = random.randint(1, 100)
     
@@ -224,7 +224,7 @@ if submitted:
                 st.error(random.choice(boss_messages))
                 st.warning("The Duolingo owl has arrived at your location 💀")
     
-        st.session_state.show_next = True
+    st.session_state.show_next = True
 
 if st.session_state.show_next:
     if st.button("Next Word ➡️"):
