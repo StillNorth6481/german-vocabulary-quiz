@@ -102,20 +102,32 @@ wrong_messages = [
 ]
 
 good_gifs = [
-    "https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif",   # happy dance
-    "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif",      # celebration
-    "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif",   # success
-    "https://media.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif",  # excited
-    "https://media.giphy.com/media/ely3apij36BJhoZ234/giphy.gif",  # thumbs up
-    "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif"        # applause
+    "gifs/good/good1.gif",
+    "gifs/good/good2.gif",
+    "gifs/good/good3.gif",
+    "gifs/good/good4.gif",
+    "gifs/good/good5.gif",
+    "gifs/good/good6.gif",
+    "gifs/good/good7.gif",
+    "gifs/good/good8.gif",
+    "gifs/good/good9.gif",
+    "gifs/good/good10.gif",
+    "gifs/good/good11.gif"
 ]
 bad_gifs = [
-    "https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif",  # facepalm
-    "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",       # disappointed
-    "https://media.giphy.com/media/10JhviFuU2gWd6/giphy.gif",      # nope
-    "https://media.giphy.com/media/26n6WywJyh39n1pBu/giphy.gif",   # crying
-    "https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif",       # confused
-    "https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif"       # what?!
+    "gifs/bad/bad1.gif",
+    "gifs/bad/bad2.gif",
+    "gifs/bad/bad3.gif",
+    "gifs/bad/bad4.gif",
+    "gifs/bad/bad5.gif",
+    "gifs/bad/bad6.gif",
+    "gifs/bad/bad7.gif",
+    "gifs/bad/bad8.gif",
+    "gifs/bad/bad9.gif",
+    "gifs/bad/bad10.gif",
+    "gifs/bad/bad11.gif",
+    "gifs/bad/bad12.gif",
+    "gifs/bad/bad13.gif"
 ]
 
 boss_messages = [
