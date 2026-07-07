@@ -169,7 +169,7 @@ if submitted:
         st.success(random.choice(correct_messages))
         st.session_state.score += 1
 
-        if good_gifs and random.randint(1, 50) == 1:
+        if good_gifs and random.randint(1, 5) == 1:
             st.image(random.choice(good_gifs), width=350)
             st.success(f"LEGENDARY DROP: {random.choice(legendary_rewards)}")
 
