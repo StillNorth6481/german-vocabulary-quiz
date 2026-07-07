@@ -214,7 +214,6 @@ if submitted:
                         st.image(random.choice(bad_gifs), width=250)
     
             elif chance <= 95:
-                st.snow()
                 st.error(random.choice(wrong_messages))
     
             elif chance <= 99:
