@@ -189,7 +189,7 @@ if submitted:
             
             if good_gifs:
                 gif = random.choice(good_gifs)
-                st.write("GOOD:", gif)
+                #st.write("GOOD:", gif)
                 st.image(gif, width=350)
                 
             st.success(
@@ -202,7 +202,7 @@ if submitted:
                 
         if bad_gifs:
              gif = random.choice(bad_gifs)
-             st.write("BAD:", gif)
+             #st.write("BAD:", gif)
              st.image(gif, width=250)
     
     st.session_state.show_next = True
