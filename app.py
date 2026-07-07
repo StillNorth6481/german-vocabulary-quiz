@@ -176,14 +176,13 @@ if submitted:
             st.session_state.score += 1
             
             if good_gifs:
-                        gif = random.choice(good_gifs)
-                        st.write("GOOD:", gif)
-                        st.image(gif, width=350)
-                )
-                st.success(
-                    f"LEGENDARY DROP: {random.choice(legendary_rewards)}"
-                )
-    
+                gif = random.choice(good_gifs)
+                st.write("GOOD:", gif)
+                st.image(gif, width=350)
+                
+            st.success(
+                f"LEGENDARY DROP: {random.choice(legendary_rewards)}"
+            )
     else:
     
         st.error(random.choice(wrong_messages))
@@ -193,7 +192,6 @@ if submitted:
              gif = random.choice(bad_gifs)
              st.write("BAD:", gif)
              st.image(gif, width=250)
-            )
     
     st.session_state.show_next = True
 
